@@ -5,10 +5,9 @@ let db = require("../models");
 module.exports = function(app) {
 
     app.get("/api/workouts", (req, res) => {
-      db.Workout.find({
-      }).then(data => {
-        //   console.log("x",data)
-          // res.send(data)
+      db.Workout.aggregate([{
+        $addFields:{totalDuration: { $sum: "$exercises.duration" }}
+      }]).then(data => {
         res.json(data)
       }).catch(err => {
         res.status(400).json(err);
@@ -16,7 +15,9 @@ module.exports = function(app) {
     });
 
     app.get("/api/workouts/range", (req, res) => {
-      db.Workout.find({}).sort({ _id: -1 })
+      db.Workout.aggregate([{
+        $addFields:{totalDuration: { $sum: "$exercises.duration" }}
+      }]).sort({ "day":-1 })
       .limit(7).then(data => {
         res.json(data)
       }).catch(err => {
