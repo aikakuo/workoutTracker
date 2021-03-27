@@ -34,7 +34,7 @@ SO THAT I know what is my daily workout progress.
 ```
 ## Demo
 
-![Heroku](demo.gif)
+![Heroku](/demo/demo.gif)
 
 [Deloyed to HEROKU](https://fast-anchorage-40269.herokuapp.com/)
 
