@@ -32,11 +32,11 @@ I WANT to see workout progress Dashboard.
 SO THAT I know what is my daily workout progress. 
 
 ```
-##Demo
+## Demo
 
-![deployedToHeroku](demo.gif)
+![Heroku](demo.gif)
 
-[Deloyed in HEROKU](https://fast-anchorage-40269.herokuapp.com/)
+[Deloyed to HEROKU](https://fast-anchorage-40269.herokuapp.com/)
 
 ## Technologies
 - HTML5
